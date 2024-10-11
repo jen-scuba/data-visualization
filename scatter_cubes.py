@@ -1,11 +1,12 @@
 import matplotlib.pyplot as plt
 
-x_values = range(1, 1001)
-y_values = [x**2 for x in x_values]
+# x_values = range(1,6)
+x_values = range(1,5001)
+y_values = [x**3 for x in x_values]
 
 plt.style.use('seaborn-v0_8')
 fig, ax = plt.subplots()
-# ax.scatter(x_values, y_values, color=(0, 0.8, 0), s=10)
+
 ax.scatter(x_values, y_values, c=y_values, cmap=plt.cm.Blues, s=10)
 
 # Set chart title and label axes.
@@ -17,8 +18,9 @@ ax.set_ylabel("Square of Value", fontsize=14)
 ax.tick_params(labelsize=14)
 
 # Set the range for each axis.
-ax.axis([0, 1110, 0, 1_100_000])
-#ax.ticklabel_format(style='plain')
+# ax.ticklabel_format(style='plain')
+# ax.axis([0, 6, 0, 130])
+ax.axis([0, 810, 0, 50_500_000])
 
-# plt.show()
-plt.savefig('squares_plot.jpg', bbox_inches='tight')
+plt.show()
+# plt.savefig('squares_cube_5k.jpg', bbox_inches='tight')
